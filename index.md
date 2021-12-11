@@ -1,37 +1,92 @@
 ## Welcome to My prodect Website Pages
 
-You can use the [editor on GitHub](https://github.com/Gianna1223/Gianna1223.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+目录
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Self-introduction
 
-### Markdown
+- I'm Qing Gao, a student from SMU. This page is used to display the learning results of smu7345. Through this course, I achieved:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1. Understand the differences between C + + and JS in operation.
+2. Master the basic principle of network communication.
+3. Have a preliminary understanding of emscrxxx and master some simple applications.
+4. Package the web into a local app.
 
-```markdown
-Syntax highlighted code block
+<5个lab的内容>
 
-# Header 1
-## Header 2
-### Header 3
+1. utilize Emscripten to convert a c++ library/application into a web application via WebAssembly (WASM)
+2. 
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+### Achievement display
 
-[Link](url) and ![Image](src)
-```
+#### Lab one 
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+> Building and Analyzing an Emscripten Library / Application
 
-### Jekyll Themes
+- If you want to download the complete lab code and report, click git connection···
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Gianna1223/Gianna1223.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+1. Setup the Emscripten pipeline 
 
-### Support or Contact
+   1.  Download emsdk through git's clone command
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+   `git clone https://github.com/emscripten-core/emsdk.git`
+
+   2.  Enter folder
+
+   `cd emsdk`
+
+   3.  Get the latest emsdk version
+
+   `git pull`
+
+   4. Download and install the latest tools
+
+   `./emsdk install latest`
+
+   5.  Activate tool
+
+   `./emsdk active latest`
+
+   6.  Run to see if the installation is successful
+
+   `emcc -v`
+
+- Now you have already install the Emscripten successfully!~
+- If you want to get more information about emscripten, please visit the [Emscripten](https://emscripten.org/) official website
+
+
+
+2. Verify with hello world project
+
+   1. Create c++ file
+   2. Run `emcc hello.c -s WASH=1 -o hello.html`
+
+   >Error: ‘zsh command not found: emcc’
+   >
+   >Reason: EMCC is not configured in the current path
+   >
+   >Solution：Put the hello.c file into emsdk file, and active the emcc
+
+   a. Enter emsdk file environment, and activate environment variable
+
+   b. Go back to the file path where hello.c is located, and run
+
+   c. File generated successfully
+
+   d. Open file with browser
+
+3. Compare and Contrast execution time between native and wasm based code bases
+
+图 图 图
+
+
+
+#### Lab Two
+
+> Building a JS library using WebIDL and Emscripten
+
+- If you want to download the complete lab code and report, click git connection···
+
+This is a library lending sales statistics program, including library class and book class. Book class is used to store book information, and library class is used to store library management information. When a student borrows a book, the system will first judge whether there is this book and whether there is enough inventory of this book. If so, students need to pay the corresponding rent to terminate the contract, The program will count the total and average borrowing sales of the library.
+
