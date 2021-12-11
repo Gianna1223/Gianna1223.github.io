@@ -24,7 +24,7 @@
 
 > Building and Analyzing an Emscripten Library / Application
 
-- If you want to download the complete lab code and report, click git connection···
+- If you want to download the complete lab code and report, click [Here](https://github.com/Gianna1223/7345Labs.git)
 
 1. Setup the Emscripten pipeline 
 
