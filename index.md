@@ -10,7 +10,7 @@
 
 ***If you want to download the complete lab code, data and report***
 
-***[Click Here](lianjie)***
+***[Click Here](https://github.com/Gianna1223/7345Labs.git)***
 
 
 
@@ -196,6 +196,7 @@ void Book::set_price(double price){this->price = price;}
 
 
 
+
 - ***library.h*** and ***library.cpp*** are used to implement library related methods such as creating get/set total book number, showing book information, calculating total sales and average sales. In the library.cpp, borrow_book() function will first search if there are the book that will be borrowed and if there are enough book to be borrowed. When a student borrows n books, the stock of this book will be reduced by n. If there are not enough books for students to borrow, the system will return a prompt.
 
 ***library.h***
@@ -361,6 +362,7 @@ void Library::sale_show(double sum, double average)
 
 
 
+
 - ***test.cpp*** realizes the process of borrowing books and calculating sales volume in the form of C ++ and main.js realizes the process of borrowing books and calculating sales volume in the form of JavaScript.
 
 ```c++
@@ -431,6 +433,7 @@ int main()
   ```
 
   
+
 
 - ***my_glue_wrapper.cpp*** includes all .h file of class and glue.cpp.
 
