@@ -62,7 +62,7 @@
 
 #### 2. Verify with hello world project
 
-1. Create c++ file
+- Create c++ file
 
 ```c++
 int main(int argc, char ** argv) {
@@ -72,7 +72,7 @@ int main(int argc, char ** argv) {
 
 
 
-2. Run `emcc hello.c -s WASH=1 -o hello.html`
+- Run `emcc hello.c -s WASH=1 -o hello.html`
 
 >Error: ‘zsh command not found: emcc’
 >
