@@ -1,4 +1,4 @@
-## Welcome to My prodect Website Pages
+Welcome to My prodect Website Pages
 
 目录
 
@@ -8,13 +8,8 @@
 
 1. Understand the differences between C + + and JS in operation.
 2. Master the basic principle of network communication.
-3. Have a preliminary understanding of emscrxxx and master some simple applications.
+3. Utilize Emscripten to convert a c++ library/application into a web application via WebAssembly (WASM)
 4. Package the web into a local app.
-
-<5个lab的内容>
-
-1. utilize Emscripten to convert a c++ library/application into a web application via WebAssembly (WASM)
-2. 
 
 
 
@@ -24,9 +19,9 @@
 
 > Building and Analyzing an Emscripten Library / Application
 
-- If you want to download the complete lab code and report, click [Here](https://github.com/Gianna1223/7345Labs.git)
+- If you want to download the complete lab code and report, click git connection···
 
-1. Setup the Emscripten pipeline 
+1. #####  Setup the Emscripten pipeline 
 
    1.  Download emsdk through git's clone command
 
@@ -52,14 +47,28 @@
 
    `emcc -v`
 
-- Now you have already install the Emscripten successfully!~
-- If you want to get more information about emscripten, please visit the [Emscripten](https://emscripten.org/) official website
+   ![image-20211212093119262](https://tva1.sinaimg.cn/large/008i3skNgy1gxasoar1t1j31z40dgq6d.jpg)
+
+- **Now you have already install the Emscripten successfully!~**
+
+- **If you want to get more information about emscripten, please visit the [Emscripten](https://emscripten.org/) official website** 
+
+  
 
 
 
-2. Verify with hello world project
+2. ##### Verify with hello world project
 
    1. Create c++ file
+
+   ```c++
+   int main(int argc, char ** argv) {
+     printf("Hello World\n");
+   }
+   ```
+
+   
+
    2. Run `emcc hello.c -s WASH=1 -o hello.html`
 
    >Error: ‘zsh command not found: emcc’
@@ -70,15 +79,35 @@
 
    a. Enter emsdk file environment, and activate environment variable
 
+   ![image-20211212093640106](https://tva1.sinaimg.cn/large/008i3skNgy1gxastu4474j31z405gab2.jpg)
+
    b. Go back to the file path where hello.c is located, and run
+
+   ![image-20211212093649718](https://tva1.sinaimg.cn/large/008i3skNgy1gxastyypdhj31z402idgb.jpg)
 
    c. File generated successfully
 
+   ![image-20211212093658950](https://tva1.sinaimg.cn/large/008i3skNgy1gxasu58a5sj31gw0u0wgi.jpg)
+
    d. Open file with browser
 
-3. Compare and Contrast execution time between native and wasm based code bases
+   ![image-20211212093712458](https://tva1.sinaimg.cn/large/008i3skNgy1gxasudivabj31z40nkt9y.jpg)
 
-图 图 图
+
+
+3. ##### Compare and Contrast execution time between native and wasm based code bases
+
+- This figure shows the running time of C + + code and converted code
+
+![image-20211212094424657](https://tva1.sinaimg.cn/large/008i3skNgy1gxat1vhaj4j31z407qdhe.jpg)
+
+- These two figures show the analysis of data after many experiments
+
+![截屏2021-12-12 上午9.47.22](https://tva1.sinaimg.cn/large/008i3skNgy1gxat59aauvj31bc0sidl1.jpg)
+
+
+
+
 
 
 
@@ -87,6 +116,4 @@
 > Building a JS library using WebIDL and Emscripten
 
 - If you want to download the complete lab code and report, click git connection···
-
-This is a library lending sales statistics program, including library class and book class. Book class is used to store book information, and library class is used to store library management information. When a student borrows a book, the system will first judge whether there is this book and whether there is enough inventory of this book. If so, students need to pay the corresponding rent to terminate the contract, The program will count the total and average borrowing sales of the library.
 
